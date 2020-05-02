@@ -1,0 +1,17 @@
+# Buildpacks to include in builder
+[[buildpacks]]
+id = "io.dashaun.cnb.buildpack.cobol"
+version = "0.0.1"
+image = "dashaun/cobol-buildpack"
+
+# Order used for detection
+[[order]]
+[[order.group]]
+id = "io.dashaun.cnb.buildpack.cobol"
+version = "0.0.1"
+
+# Stack that will be used by the builder
+[stack]
+id = "io.dashaun.cnb.stack.bionic"
+run-image = "dashaun/cnb-stack-run:bionic"
+build-image = "dashaun/cnb-stack-build:bionic"
